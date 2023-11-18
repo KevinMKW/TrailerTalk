@@ -17,8 +17,6 @@ const Home = () => {
 
     useEffect(()=>{getMovies()},[])
 
-    console.log(movies)
-
     return (
         <div>
             <Grid container spacing={2}>

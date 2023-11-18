@@ -1,4 +1,4 @@
-import { Box, Card, CardContent, CardMedia, Grid } from '@mui/material';
+import { Box, Card, CardMedia, Grid } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 
 const Home = () => {
@@ -18,7 +18,7 @@ const Home = () => {
     useEffect(()=>{getMovies()},[])
 
     return (
-        <div>
+        <div style={{backgroundColor:'#181818'}}>
             <Grid container spacing={2}>
                 {movies.map((movie) => {
                 return <Grid item xs={3}>
@@ -26,12 +26,10 @@ const Home = () => {
                         <Card>
                             <CardMedia 
                             component="img"
-                            height="140"
+                            max-height="140px"
                             image={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}>
 
                             </CardMedia>
-                            <CardContent>
-                            </CardContent>
                         </Card>
                     </Box>
                 </Grid>
